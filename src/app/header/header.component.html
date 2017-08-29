@@ -1,0 +1,44 @@
+
+<header class="navbar-fixed-top">
+    <div class="nrw_header_navbar">
+        <div class="nrw_header_container">
+            <div class="nrw_header_row">
+                <div class="nrw_header_row_column">
+                    <div class="nrw_header_logo">
+                        <a class="nrw_header_logo_link" href="/">
+                            <img class="nrw_header_logo_img nrw_header_logo_img_default" src="http://nrw.dev/wp-content/uploads/2017/01/nrw_logo_light-150x150.png">
+                            <img class="nrw_header_logo_img nrw_header_logo_img_shrink" src="http://nrw.dev/wp-content/uploads/2017/01/nrw_logo_dark-150x150.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="nrw_header_row_column">
+                    <a (click)="onActivate()" class="nrw_header_trigger" [class.is-active]="overlayActive">
+                        <span class="nrw_header_trigger_icon"></span>
+                        <svg x="0rem" y="0rem" width="3.125rem" height="3.125rem" viewBox="0 0 54 54">
+                            <circle fill="transparent" stroke="#fff" stroke-width="1" cx="27" cy="27" r="25" stroke-dasharray="157 157" stroke-dashoffset="157"></circle>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nrw_header_bg_overlay" [class.is-open]="overlayActive">
+        <nav class="nrw_header_nav">
+            <div class="nrw_scroll_box_outside">
+                <div class="nrw_scroll_box_inside">
+                    <div class="container-fluid">
+                        <ul class="list-unstyled nrw_header_nav_menu">
+                            <li *ngFor="let item of mainmenu" class="nrw_header_nav_menu_item">
+                                <a title="{{item.page_title}}" class="nrw_header_nav_menu_link" (click)="selectPage(item.page_slug)">
+                                    {{ item.page_title }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
