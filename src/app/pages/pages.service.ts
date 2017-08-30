@@ -9,7 +9,7 @@ export class PagesService {
     private baseWpHost = environment.wpBase;
     private customWpHost = environment.wpCustomBase;
 
-    constructor(private http: HttpClient) { }
+    constructor(protected http: HttpClient) {}
 
     getPages(): Observable<Page[]> {
         return this.http.get<Page[]>(this.baseWpHost + 'pages');

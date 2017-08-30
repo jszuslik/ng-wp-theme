@@ -1,0 +1,113 @@
+.nrw_promo_block_v1 {
+  background-color: #242526 !important;
+}
+.nrw_promo_block_v1 .container {
+  padding-top: 6.25rem;
+  padding-bottom: 1.25rem;
+}
+.nrw_promo_v1_square_effect {
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+.nrw_promo_v1_square_effect:before {
+  position: absolute;
+  top: -5rem;
+  left: -1.875rem;
+  width: 18.75rem;
+  height: 10.9375rem;
+  border: 1px solid;
+  border-color: rgba(255,255,255,.2);
+  content: " ";
+}
+.nrw_promo_v1_square_effect:after {
+  position: absolute;
+  right: 0;
+  bottom: -2rem;
+  width: 9.375rem;
+  height: 9.375rem;
+  border: 1px solid;
+  content: " ";
+  z-index: 1;
+  border-color: rgba(3,169,244,.5);
+}
+.nrw_promo_block_v1 h1 {
+  font-size: 3.125rem;
+  font-weight: 400;
+  font-family: Montserrat,sans-serif;
+  line-height: 1.2;
+  margin-top: 0;
+  text-transform: capitalize;
+  margin-bottom: .75rem;
+}
+.nrw_promo_block_v1 p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nrw_promo_block_v1 h1,
+.nrw_promo_block_v1 p {
+  color: #fff;
+}
+.nrw_cta_form {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 0.25rem !important;
+  width: 21.875rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.nrw_text_center {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.nrw_text_center h2 {
+  font-size: 1.875rem !important;
+}
+.nrw_cta_input_wrapper {
+  margin-bottom: 1.875rem;
+}
+.nrw_cta_form_input {
+  height: 3.125rem;
+  font-size: .8125rem;
+  letter-spacing: .1rem;
+  background: 0 0;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  box-shadow: none;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.7,1,.7,1);
+  transition-duration: .3s;
+  color: rgba(255,255,255,.7);
+  border: none;
+  border-bottom: .0625rem solid rgba(255,255,255,.5);
+  border-radius: 0;
+  padding: 0 1.25rem 0 0;
+}
+.nrw_btn_cta {
+  border-radius: 3.125rem !important;
+  margin-bottom: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.7,1,.7,1);
+  vertical-align: middle;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  white-space: nowrap;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  transition-duration: .3s;
+  font-size: .8125rem;
+  font-weight: 400;
+  padding: 1rem 2.5rem;
+  color: #222324;
+  background: #fff;
+}

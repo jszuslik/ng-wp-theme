@@ -16,6 +16,10 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(.7,1,.7,1);
 }
+.nrw_header_scroll .nrw_header_navbar {
+  box-shadow: 0 0 0.9375rem 0 rgba(34,35,36,.05);
+  background: #fff;
+}
 .nrw_header_container {
   width: 100%;
   height: auto;
@@ -43,22 +47,30 @@
   display: inline-block;
   padding: 1rem 0;
 }
-.nrw_header_logo_img,
-.nrw_header_logo_img_shrink {
+.nrw_header_logo_img {
   max-width: 75px;
   display: block;
   transition-duration: .3s;
   transition-property: all;
   transition-timing-function: cubic-bezier(.7,1,.7,1);
 }
-.nrw_header_logo_img_default {
+.nrw_header_logo_img_dark,
+.is-open .nrw_header_logo_img_dark,
+.nrw_header_scroll.is-open .nrw_header_logo_img_dark {
   opacity: 1;
 }
-.nrw_header_logo_img_shrink {
+.nrw_header_scroll .nrw_header_logo_img_dark,
+.nrw_header_scroll.is-open .nrw_header_logo_img_light {
+  opacity: 0;
+}
+.nrw_header_logo_img_light {
   position: absolute;
-  top: 1rem;
+  top: 0;
   left: 0;
   opacity: 0;
+}
+.nrw_header_scroll .nrw_header_logo_img_light {
+  opacity: 1;
 }
 .nrw_header_trigger {
   position: relative;
@@ -89,6 +101,9 @@
   transition-duration: .5s;
   transition-property: all;
   transition-timing-function: cubic-bezier(.7,1,.7,1);
+}
+.nrw_header_scroll .nrw_header_trigger_icon {
+  background: #222324;
 }
 .is-active .nrw_header_trigger_icon {
   background: #fff;
@@ -135,6 +150,7 @@
   transform: rotate(-45deg);
 }
 .nrw_header_trigger svg {
+  cursor: pointer;
   position: absolute;
   top: 0;
   left: 0;

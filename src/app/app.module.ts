@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -16,6 +16,12 @@ import { PageSingleComponent } from './pages/page-single/page-single.component';
 import {PagesService} from './pages/pages.service';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
+import { FrontpageComponent } from './frontpage/frontpage.component';
+import { CallToActionComponent } from './frontpage/call-to-action/call-to-action.component';
+import {ComponentMetadata} from 'codelyzer/angular/metadata';
+import {CommonService} from './services/common.service';
+import { AboutComponent } from './frontpage/about/about.component';
+import { SpecialtiesComponent } from './frontpage/specialties/specialties.component';
 
 @NgModule({
   declarations: [
@@ -27,18 +33,24 @@ import { BodyComponent } from './body/body.component';
     PageListComponent,
     PageSingleComponent,
     FooterComponent,
-    BodyComponent
+    BodyComponent,
+    FrontpageComponent,
+    CallToActionComponent,
+    AboutComponent,
+    SpecialtiesComponent
   ],
   imports: [
       BrowserModule,
       FormsModule,
       HttpClientModule,
       Wpng2RoutingModule,
-      NgbModule.forRoot()
+      NgbModule.forRoot(),
+      ReactiveFormsModule,
   ],
   providers: [
       MenuService,
-      PagesService
+      PagesService,
+      CommonService
   ],
   bootstrap: [AppComponent]
 })

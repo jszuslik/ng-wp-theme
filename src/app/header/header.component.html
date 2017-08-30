@@ -1,13 +1,13 @@
 
-<header class="navbar-fixed-top">
+<header class="navbar-fixed-top" [class.nrw_header_scroll]="isScroll" [class.is-open]="overlayActive">
     <div class="nrw_header_navbar">
         <div class="nrw_header_container">
             <div class="nrw_header_row">
                 <div class="nrw_header_row_column">
                     <div class="nrw_header_logo">
-                        <a class="nrw_header_logo_link" href="/">
-                            <img class="nrw_header_logo_img nrw_header_logo_img_default" src="http://nrw.dev/wp-content/uploads/2017/01/nrw_logo_light-150x150.png">
-                            <img class="nrw_header_logo_img nrw_header_logo_img_shrink" src="http://nrw.dev/wp-content/uploads/2017/01/nrw_logo_dark-150x150.png">
+                        <a class="nrw_header_logo_link" routerLink="/">
+                            <img class="nrw_header_logo_img nrw_header_logo_img_dark" src="http://nrw.dev/wp-content/uploads/2017/01/nrw_logo_light-150x150.png">
+                            <img class="nrw_header_logo_img nrw_header_logo_img_light" src="http://nrw.dev/wp-content/uploads/2017/01/nrw_logo_dark-150x150.png">
                         </a>
                     </div>
                 </div>

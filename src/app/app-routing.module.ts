@@ -3,11 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { PostSingleComponent } from './posts/post-single/post-single.component';
 import {PageSingleComponent} from './pages/page-single/page-single.component';
+import {FrontpageComponent} from './frontpage/frontpage.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: PostListComponent,
+    component: FrontpageComponent,
     pathMatch: 'full'
   },
   {

@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
+body {
+    font-size: 1rem;
+    font-family: Lato,sans-serif;
+    color: #222324;
+    background-color: #fff;
+}
+body, p {
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400 !important;
+    font-family: Montserrat,sans-serif !important;
+    line-height: 1.2  !important;;
+    color: #242424;
+    margin-top: 0;
+    text-transform: capitalize;
+    margin-bottom: .75rem;
+}
+p {
+    font-size: .9375rem;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+p, small {
+    color: #656565;
+}
+.nrw_color_white {
+    color: #fff !important;
+}
+.nrw_primary_color {
+    color: #03a9f4 !important;
+}
+.colored-rule-center, .colored-rule-left, .colored-rule-right {
+    margin: 0;
+    width: 1px;
+    border-top: 1px solid #03a9f4;
+}
+.colored-rule-center {
+    margin: 0 auto;
+}
+.nrw_margin_b_10 {
+    margin-bottom: 0.625rem;
+}

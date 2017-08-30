@@ -1,0 +1,51 @@
+<div class="nrw_promo_block_v1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="nrw_promo_v1_square_effect">
+                    <h1 [innerHtml]="blogDescription"></h1>
+                    <p [innerHtml]="homePage.post_content"></p>
+                </div>
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="wow fadeInUp" data-wow-duration=".9" data-wow-delay=".1s">
+                    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="nrw_cta_form">
+                        <div class="form-group">
+                            <div class="nrw_text_center">
+                                <h2 class="nrw_color_white">Start Investing In Your Digital Future Right Now</h2>
+                            </div>
+                            <div class="nrw_cta_input_wrapper">
+                                <input
+                                        class="form-control nrw_cta_form_input"
+                                        placeholder="* Name"
+                                        id="name"
+                                        name="name"
+                                        formControlName="name">
+                            </div>
+                            <div class="nrw_cta_input_wrapper">
+                                <input
+                                        class="form-control nrw_cta_form_input"
+                                        placeholder="* Email"
+                                        id="email"
+                                        name="email"
+                                        formControlName="email">
+                            </div>
+                            <div class="nrw_cta_input_wrapper">
+                                <input
+                                        class="form-control nrw_cta_form_input"
+                                        placeholder="* Phone Number"
+                                        id="phone"
+                                        name="phone"
+                                        formControlName="phone">
+                            </div>
+                        </div>
+                        <button
+                                class="btn btn-block nrw_btn_cta"
+                                type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

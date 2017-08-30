@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, Inject, OnInit} from '@angular/core';
 import {MenuService} from '../menu/menu.service';
 import {MenuItem} from '../classes/menuitem';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Router} from '@angular/router';
+import {DOCUMENT} from '@angular/common';
 
 @Component({
   selector: 'app-header',
@@ -13,9 +14,11 @@ export class HeaderComponent implements OnInit {
 
     mainmenu: MenuItem[] = [];
 
+    isScroll = false;
+
     overlayActive = false;
 
-    constructor(private _ms: MenuService, private router: Router ) { }
+    constructor(private _ms: MenuService, private router: Router, @Inject(DOCUMENT) private document: Document ) { }
 
     getMainMenu(){
         this._ms.getMainMenu()
@@ -34,6 +37,16 @@ export class HeaderComponent implements OnInit {
 
     onActivate() {
         this.overlayActive = !this.overlayActive;
+    }
+
+    @HostListener("window:scroll", [])
+    onWindowScroll() {
+        let number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if (number > 30) {
+            this.isScroll = true;
+        } else if (this.isScroll && number < 10) {
+            this.isScroll = false;
+        }
     }
 
     ngOnInit() {
