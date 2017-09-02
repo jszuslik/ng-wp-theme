@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="nrw_promo_v1_square_effect">
-                    <h1 [innerHtml]="blogDescription"></h1>
+                    <h1 [innerHtml]="blogInfo.title"></h1>
+                    <h2 [innerHtml]="blogInfo.description"></h2>
                     <p [innerHtml]="homePage.post_content"></p>
                 </div>
             </div>
@@ -40,6 +41,8 @@
                                         formControlName="phone">
                             </div>
                         </div>
+                        <div class="nrw_cta_response" [class.success]="ctaIsFormSuccess">{{ctaFormSuccessMessage}}</div>
+                        <div class="nrw_cta_response" [class.error]="ctaIsFormError">{{ctaFormErrorMessage}}</div>
                         <button
                                 class="btn btn-block nrw_btn_cta"
                                 type="submit">Submit</button>

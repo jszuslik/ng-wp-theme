@@ -22,6 +22,13 @@ import {ComponentMetadata} from 'codelyzer/angular/metadata';
 import {CommonService} from './services/common.service';
 import { AboutComponent } from './frontpage/about/about.component';
 import { SpecialtiesComponent } from './frontpage/specialties/specialties.component';
+import { ProcessComponent } from './frontpage/process/process.component';
+import { FeedbackComponent } from './frontpage/feedback/feedback.component';
+import {RouterModule} from '@angular/router';
+import { PageChildrenComponent } from './pages/single-templates/page-children/page-children.component';
+import { PageDefaultComponent } from './pages/single-templates/page-default/page-default.component';
+import { LeftComponent } from './pages/single-templates/page-children/children-sides/left/left.component';
+import { RightComponent } from './pages/single-templates/page-children/children-sides/right/right.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +44,13 @@ import { SpecialtiesComponent } from './frontpage/specialties/specialties.compon
     FrontpageComponent,
     CallToActionComponent,
     AboutComponent,
-    SpecialtiesComponent
+    SpecialtiesComponent,
+    ProcessComponent,
+    FeedbackComponent,
+    PageChildrenComponent,
+    PageDefaultComponent,
+    LeftComponent,
+    RightComponent
   ],
   imports: [
       BrowserModule,

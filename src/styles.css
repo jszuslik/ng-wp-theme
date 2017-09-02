@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i');
+html {
+    overflow-x: hidden;
+}
 body {
     font-size: 1rem;
     font-family: Lato,sans-serif;
@@ -27,12 +30,225 @@ p {
 p, small {
     color: #656565;
 }
+em, em>a, li, li>a {
+    color: #242424;
+}
+em, h6, li {
+    font-size: 1rem;
+}
+em, li {
+    font-weight: 300;
+}
+a:hover {
+    text-decoration: none !important;
+}
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.breadcrumbs {
+    padding: 15px 0;
+}
+.bc {
+    display: inline-block;
+}
+.bc:after {
+    content: "/";
+    margin: 0 5px;
+}
+.bc:last-child:after {
+    content: "";
+    margin: 0;
+}
+.bc a {
+    color: #007bff;
+}
+.bc a:hover {
+    color: #0056b3;
+}
+.nrw_section_header {
+    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .125rem;
+    margin-bottom: 1.5625rem;
+}
+/**
+    *** Colors ***
+ */
 .nrw_color_white {
     color: #fff !important;
 }
 .nrw_primary_color {
     color: #03a9f4 !important;
 }
+.nrw_primary_bg_color {
+    background-image: linear-gradient(145deg, rgba(3, 169, 244, 0.6) 0%, #03a9f4 100%);
+    background-repeat: repeat-x;
+}
+.nrw_dark_bg_color {
+    background-color: #222324 !important;
+}
+.nrw_color_white_opacity {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/**
+    ***Margins***
+ */
+.nrw_margin_t_15 {
+    margin-top: 0.9375rem;
+}
+.nrw_margin_t_100 {
+    margin-top: 6.25rem;
+}
+.nrw_margin_b_0 {
+    margin-bottom: 0;
+}
+.nrw_margin_b_10 {
+    margin-bottom: 0.625rem;
+}
+.nrw_margin_b_25 {
+    margin-bottom: 1.5625rem;
+}
+.nrw_margin_b_30 {
+    margin-bottom: 1.875rem;
+}
+.nrw_margin_b_40 {
+    margin-bottom: 2.5rem;
+}
+.nrw_margin_b_80 {
+    margin-bottom: 5rem;
+}
+.nrw_margin_b_100 {
+    margin-bottom: 6.25rem;
+}
+
+
+/**
+    ***Padding***
+ */
+.nrw_padding_y_20 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+.nrw_padding_b_50 {
+    padding-bottom: 3.125rem;
+}
+.nrw_padding_y_125 {
+    padding-top: 7.8125rem;
+    padding-bottom: 7.8125rem;
+}
+.nrw_padding_y_50 {
+    padding-top: 3.125rem;
+    padding-bottom: 3.125rem;
+}
+.nrw_padding_x_20 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+/**
+    ***Buttons***
+ */
+.nrw_btn_wrapper {
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+}
+.nrw_btn {
+    border-radius: 3.125rem !important;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.7,1,.7,1);
+    vertical-align: middle;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    transition-duration: .3s;
+    font-size: .8125rem;
+    font-weight: 400;
+    padding: 1rem 2.5rem;
+    border: .0625rem solid #03a9f4;
+    text-align: center;
+}
+.nrw_btn_spec {
+    color: #fff;
+    background: #03a9f4;
+}
+.nrw_btn_process {
+    color: #222324;
+    background: #fff;
+}
+/**
+    ***Font Sizes***
+ */
+.nrw_font_size_60 {
+    font-size: 3.75rem !important;
+}
+.nrw_font_size_50 {
+    font-size: 3.125rem !important;
+}
+.nrw_font_size_36 {
+    font-size: 2.25rem !important;
+}
+.nrw_font_size_20 {
+    font-size: 1.625rem !important;
+}
+.nrw_font_size_18 {
+    font-size: 1.125rem !important;
+}
+.nrw_font_size_14 {
+    font-size: 0.875rem !important;
+}
+
+/**
+    ***Font Weights***
+ */
+.nrw_font_weight_300 {
+    font-weight: 300 !important;
+}
+.nrw_font_weight_400 {
+    font-weight: 400 !important;
+}
+.nrw_font_weight_700 {
+    font-weight: 700 !important;
+}
+
+/**
+    ***Letter Spacing
+ */
+.nrw_letter_spacing_2 {
+    letter-spacing: 0.125rem;
+}
+
+/**
+    *** Images ***
+ */
+.nrw_child_section {
+    position: relative;
+}
+.nrw_child_section_img_right {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+}
+.nrw_child_section_img_left {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+}
+.nrw_bg_position_center {
+    background-size: cover !important;
+    background-position: center center !important
+}
+.nrw_height_100_percent {
+    height: 100%;
+}
+
+
 .colored-rule-center, .colored-rule-left, .colored-rule-right {
     margin: 0;
     width: 1px;
@@ -40,7 +256,4 @@ p, small {
 }
 .colored-rule-center {
     margin: 0 auto;
-}
-.nrw_margin_b_10 {
-    margin-bottom: 0.625rem;
 }

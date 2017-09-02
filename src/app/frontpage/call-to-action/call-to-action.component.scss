@@ -32,12 +32,9 @@
 }
 .nrw_promo_block_v1 h1 {
   font-size: 3.125rem;
-  font-weight: 400;
-  font-family: Montserrat,sans-serif;
-  line-height: 1.2;
-  margin-top: 0;
-  text-transform: capitalize;
-  margin-bottom: .75rem;
+}
+.nrw_promo_block_v1 h2 {
+  font-size: 2.125rem;
 }
 .nrw_promo_block_v1 p {
   font-size: 1.25rem;
@@ -47,6 +44,7 @@
   margin-bottom: 0;
 }
 .nrw_promo_block_v1 h1,
+.nrw_promo_block_v1 h2,
 .nrw_promo_block_v1 p {
   color: #fff;
 }
@@ -110,4 +108,22 @@
   padding: 1rem 2.5rem;
   color: #222324;
   background: #fff;
+}
+.nrw_cta_response {
+  display: none;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 15px;
+}
+.nrw_cta_response.success {
+  display: block;
+  background-color: lime;
+  color: green;
+  border: 1px solid green;
+}
+.nrw_cta_response.error {
+  display: block;
+  background-color: #f28786;
+  color: red;
+  border: 1px solid red;
 }

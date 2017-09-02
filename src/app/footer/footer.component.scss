@@ -1,0 +1,17 @@
+.nrw_top_footer {
+  border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1);
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.nav_footer_menu_item {
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+}
+.nav_footer_menu_link {
+  cursor: pointer;
+  font-size: 0.9375rem !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.nav_footer_menu_link:hover {
+  color: #03a9f4 !important;
+}

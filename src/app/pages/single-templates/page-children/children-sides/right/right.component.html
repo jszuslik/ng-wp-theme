@@ -1,0 +1,29 @@
+<div class="nrw_child_section">
+    <div class="container nrw_padding_y_125">
+        <div class="row">
+            <div class="col-md-4 ml-md-auto">
+                <p>Page Content</p>
+            </div>
+            <div class="col-md-4 nrw_margin_t_15 nrw_margin_b_0">
+                <p class="text-uppercase nrw_font_size_14 nrw_font_weight_700 nrw_primary_color nrw_letter_spacing_2 nrw_margin_b_25">
+                    About
+                </p>
+                <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".1s">
+                    <h2 class="nrw_font_size_50" [innerHTML]="page.post_title"></h2>
+                </div>
+                <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".3s">
+                    <h2 class="nrw_font_size_50"></h2>
+                </div>
+                <div class="wow fadeInRight" data-wow-duration=".3" data-wow-delay=".5s">
+                    <div>
+                        <a class="text-uppercase nrw_btn nrw_btn_spec" [innerHTML]="page.post_title" (click)="selectPage(page.post_name)"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 nrw_child_section_img_left nrw_bg_position_center nrw_height_100_percent" style="background: url('<?php echo nrw_return_img_url( get_post_meta($page->ID, 'nrw_meta_image', true), NRW_THUMB_FUNNELS);?>') no-repeat; padding: 0; opacity: 0.9">
+        <div class="overlay-grid" style="position: relative; top: 0; width: 100%; height: 100%; background: url('http://newsite.norulesweb.com/wp-content/uploads/2017/04/bright-squares.png')"></div>
+        <!--        <img class="img-responsive" src="wp-content/uploads/2017/04/web_design_ux_970x970.jpg" alt="Image">-->
+    </div>
+</div>

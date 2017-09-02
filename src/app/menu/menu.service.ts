@@ -12,11 +12,11 @@ export class MenuService {
 
     }
 
-    private _getMainMenuUrl = this.customWpHost + 'mainmenu';
+    private _getMenusUrl = this.customWpHost + 'menus/';
 
-    getMainMenu(): Observable<MenuItem[]> {
-        console.log(this._http.get<MenuItem[]>(this._getMainMenuUrl));
-        return this._http.get<MenuItem[]>(this._getMainMenuUrl);
+    getMenu(menu: string): Observable<MenuItem[]> {
+        console.log(this._http.get<MenuItem[]>(this._getMenusUrl + menu));
+        return this._http.get<MenuItem[]>(this._getMenusUrl + menu);
     }
 
 }

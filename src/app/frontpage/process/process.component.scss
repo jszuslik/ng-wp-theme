@@ -1,0 +1,27 @@
+.nrw_process {
+  padding-top: 7.8125rem;
+  padding-bottom: 7.8125rem;
+}
+.nrw_process_circle {
+  font-family: Lato,sans-serif;
+  text-align: center;
+  font-size: 2.375rem !important;
+  display: inline-block;
+  box-shadow: 0 0.3125rem 1rem 0 rgba(34, 35, 36, 0.2);
+  border-radius: 50% !important;
+  width: 6.25rem;
+  height: 6.25rem;
+  padding: 1.25rem;
+  color: #03a9f4 !important;
+  background-color: #fff !important;
+}
+.nrw_process_item:before {
+  position: absolute;
+  top: 3.125rem;
+  left: 60%;
+  width: 80%;
+  height: .0625rem;
+  background: rgba(255,255,255,.2);
+  content: " ";
+  margin-top: -.03125rem;
+}

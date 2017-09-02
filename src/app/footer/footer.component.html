@@ -1,5 +1,57 @@
+<footer class="nrw_footer nrw_dark_bg_color">
+    <div class="nrw_top_footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <ul class="list-unstyled">
+                        <li *ngFor="let footeritem of footerMenu" class="nav_footer_menu_item">
+                            <a title="{{footeritem.page_title}}" class="nav_footer_menu_link" (click)="selectPage(footeritem.page_slug)">
+                                {{footeritem.page_title}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="list-unstyled">
+                        <li *ngFor="let socialItem of socialMenu" class="nav_footer_menu_item">
+                            <a title="{{socialItem.page_title}}" class="nav_footer_menu_link" target="_blank" href="{{socialItem.page_slug}}">
+                                {{socialItem.page_title}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <ul class="list-unstyled">
+                        <li *ngFor="let serviceItem of serviceMenu" class="nav_footer_menu_item">
+                            <a title="{{serviceItem.page_title}}" class="nav_footer_menu_link" (click)="selectPage(serviceItem.page_slug)">
+                                {{serviceItem.page_title}}
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="nrw_color_white nrw_font_size_18">{{blogInfo.title}}</h3>
+                    <p class="nrw_color_white">{{blogInfo.description}}</p>
+                    <ul class="list-unstyled">
+                        <li class="nav_footer_menu_item">
+                            <a title="Phone Number" class="nav_footer_menu_link">
+                                Phone: (414) 202-3939
+                            </a>
+                        </li>
+                        <li class="nav_footer_menu_item">
+                            <a title="Contact Email Address" class="nav_footer_menu_link">
+                                Email: info@noruleweb.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nrw_bottom_footer">
 
-<p>I am a footer</p>
+    </div>
+</footer>
 
 
 

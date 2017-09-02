@@ -1,7 +1,38 @@
-<div *ngIf="page">
-    <h1>{{ page.post_title }}</h1>
-    <div [innerHTML]="page.post_content"></div>
-</div>
-<div *ngIf="!page">
-    no post found this time
+<section style="background: url('http://newsite.norulesweb.com/wp-content/uploads/2017/04/milwaukee_bw_1920x1080.jpg') 25% 100% no-repeat fixed; display: flex;">
+    <div class="nrw_overlay_grid" style="position: relative; top: 0; width: 100%; height: 100%; background: rgba(0,0,0, 0.8);">
+        <div class="container text-center nrw_page_overlay">
+            <div class="nrw_padding_y_50 nrw_margin_b_100 nrw_margin_t_100">
+                <h1 class="nrw_font_size_60 nrw_color_white" [innerHTML]="page.post_title"></h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="nrw_page_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="nrw_margin_b_0" *ngIf="page">
+                    <ul class="list-unstyled breadcrumbs nrw_margin_b_0">
+                        <li class="bc">
+                            <a title="Home" routerLink="/">
+                                Home
+                            </a>
+                        </li>
+                        <li class="bc" *ngFor="let breadcrumb of page.breadcrumbs">
+                            <a title="{{breadcrumb.title}}" (click)="selectPage(breadcrumb.slug)">
+                                {{breadcrumb.title}}
+                            </a>
+                        </li>
+                        <li class="bc" [innerHTML]="page.post_title"></li>
+                    </ul>
+                </div>
+                <div class="" *ngIf="!page">
+                    <h2>Page Not Found</h2>
+                    <p>--- Put A list Of Links Here ---</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <app-page-children *ngIf="page.page_template === 'page-children.php'" [page]="page"></app-page-children>
+    <app-page-default *ngIf="page.page_template === 'page-default.php'" [page]="page"></app-page-default>
 </div>

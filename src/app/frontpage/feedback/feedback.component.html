@@ -1,0 +1,54 @@
+<div class="nrw_feedback">
+    <div class="container">
+        <div class="text-center nrw_margin_b_80">
+            <p class="text-uppercase nrw_font_size_14 nrw_primary_color nrw_font_weight_700 nrw_letter_spacing_2">Feedback</p>
+            <h2 class="nrw_font_size_36">Send us a note</h2>
+        </div>
+        <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="nrw_feedback_form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="nrw_feedback_input_wrapper">
+                        <input
+                            class="form-control nrw_feedback_form_input"
+                            placeholder="* Name"
+                            id="name"
+                            name="name"
+                            formControlName="name">
+                    </div>
+                    <div class="nrw_feedback_input_wrapper">
+                        <input
+                                class="form-control nrw_feedback_form_input"
+                                placeholder="* Email"
+                                id="email"
+                                name="email"
+                                formControlName="email">
+                    </div>
+                    <div class="nrw_feedback_input_wrapper">
+                        <input
+                                class="form-control nrw_feedback_form_input"
+                                placeholder="* Phone"
+                                id="phone"
+                                name="phone"
+                                formControlName="phone">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="nrw_feedback_textarea_wrapper">
+                        <textarea
+                            class="form-control nrw_feedback_form_textarea"
+                            placeholder="* Your Message"
+                            id="message"
+                            name="message"
+                            rows="11"
+                            formControlName="message"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="nrw_feedback_response" [class.success]="fbIsFormSuccess">{{fbFormSuccessMessage}}</div>
+            <div class="nrw_feedback_response" [class.error]="fbIsFormError">{{fbFormErrorMessage}}</div>
+            <div class="nrw_btn_wrapper">
+                <button type="submit" class="nrw_btn nrw_btn_spec text-uppercase">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

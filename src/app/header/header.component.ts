@@ -20,8 +20,8 @@ export class HeaderComponent implements OnInit {
 
     constructor(private _ms: MenuService, private router: Router, @Inject(DOCUMENT) private document: Document ) { }
 
-    getMainMenu(){
-        this._ms.getMainMenu()
+    getMainMenu(): void{
+        this._ms.getMenu('primary')
             .subscribe(
                 (menuitems: MenuItem[]) => {
                     console.log(menuitems);
@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
                 (err: HttpErrorResponse) => err.error instanceof Error ? console.log('An Error Occured:', err.error.message) : console.log(`Backend returned code ${err.status}, body was: ${err.error}`)
             );
     }
-    selectPage(pageslug) {
+    selectPage(pageslug): void {
         this.router.navigate([pageslug]);
         this.onActivate();
     }

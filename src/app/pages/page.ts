@@ -23,4 +23,13 @@ export class Page {
     post_mime_type: string;
     comment_count: string;
     filter: string;
+    page_template: string;
+    post_thumbnail: string;
+    children: Page[];
+    breadcrumbs: Breadcrumb[];
+}
+export class Breadcrumb {
+    id: number;
+    slug: string;
+    title: string;
 }
