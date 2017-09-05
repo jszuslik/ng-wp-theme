@@ -2,9 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <div class="nrw_promo_v1_square_effect">
-                    <h1 [innerHtml]="blogInfo.title"></h1>
-                    <h2 [innerHtml]="blogInfo.description"></h2>
+                <div class="text-center" *ngIf="!homePage">
+                    <i class="fa fa-spinner fa-pulse fa-3x fa-fw nrw_color_white"></i>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div class="nrw_promo_v1_square_effect" *ngIf="homePage">
+                    <h1 [innerHtml]="homePage.blog_title"></h1>
+                    <h2 [innerHtml]="homePage.blog_description"></h2>
                     <p [innerHtml]="homePage.post_content"></p>
                 </div>
             </div>

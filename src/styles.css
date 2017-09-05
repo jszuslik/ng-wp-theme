@@ -257,3 +257,6 @@ a:hover {
 .colored-rule-center {
     margin: 0 auto;
 }
+.colored-rule-right {
+    float: right;
+}

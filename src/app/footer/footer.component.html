@@ -14,7 +14,25 @@
                 <div class="col-md-2">
                     <ul class="list-unstyled">
                         <li *ngFor="let socialItem of socialMenu" class="nav_footer_menu_item">
-                            <a title="{{socialItem.page_title}}" class="nav_footer_menu_link" target="_blank" href="{{socialItem.page_slug}}">
+                            <a
+                                    title="{{socialItem.page_title}}"
+                                    class="nav_footer_menu_link" target="_blank"
+                                    href="{{socialItem.page_slug}}"
+                                    [class.nrw_twitter]="socialItem.page_title === 'Twitter'"
+                                    [class.nrw_facebook]="socialItem.page_title === 'Facebook'"
+                                    [class.nrw_instagram]="socialItem.page_title === 'Facebook'">
+                                <span class="fa-stack fa-sm" *ngIf="socialItem.page_title === 'Twitter'">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x"></i>
+                                </span>
+                                <span class="fa-stack fa-sm" *ngIf="socialItem.page_title === 'Facebook'">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x"></i>
+                                </span>
+                                <span class="fa-stack fa-sm" *ngIf="socialItem.page_title === 'Instagram'">
+                                    <i class="fa fa-square-o fa-stack-2x"></i>
+                                    <i class="fa fa-instagram fa-stack-1x"></i>
+                                </span>
                                 {{socialItem.page_title}}
                             </a>
                         </li>

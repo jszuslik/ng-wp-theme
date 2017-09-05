@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 export class RightComponent implements OnInit {
 
     @Input() page: Page = new Page;
+    btn_text = 'Learn More';
 
     constructor(private router: Router) { }
 
@@ -18,6 +19,9 @@ export class RightComponent implements OnInit {
     }
 
     ngOnInit() {
+        if(this.page.meta_data.nrw_btn_text[0]) {
+            this.btn_text = this.page.meta_data.nrw_btn_text[0];
+        }
     }
 
 }

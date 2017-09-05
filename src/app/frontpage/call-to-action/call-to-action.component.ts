@@ -5,6 +5,7 @@ import {PagesService} from '../../pages/pages.service';
 import {Page} from '../../pages/page';
 import {CommonService} from '../../services/common.service';
 import {FormResponse} from '../../classes/form-response';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-call-to-action',
@@ -13,11 +14,8 @@ import {FormResponse} from '../../classes/form-response';
 })
 export class CallToActionComponent implements OnInit, AfterViewInit {
 
-    blogInfo: {} = {
-        title: '',
-        description: ''
-    };
-    homePage: Page = new Page;
+    tabTitle: string;
+    homePage: Page;
 
     signUpForm = new FormGroup({
         'name': new FormControl(),
@@ -30,20 +28,25 @@ export class CallToActionComponent implements OnInit, AfterViewInit {
     ctaIsFormError = false;
     ctaFormErrorMessage = 'There Has Been An Error';
 
-    constructor(private _pageService: PagesService, private _cs: CommonService) { }
+    constructor(private _pageService: PagesService, private _cs: CommonService, private titleService: Title) { }
+
+    setTitle() {
+        this.tabTitle = this.homePage.blog_title + ' | ' + this.homePage.blog_description;
+        this.titleService.setTitle(this.tabTitle);
+    }
 
     getHomePage(): void {
-        this._cs.getBlogDescription()
-            .subscribe(
-              (bd: any) => {
-                  this.blogInfo = bd;
-              }
-          );
         this._pageService.getPage('home')
             .subscribe(
               (page: Page) => {
                   this.homePage = page;
-              }
+              },
+                (error: any) => {
+
+                },
+                () => {
+                    this.setTitle();
+                }
           );
     }
 

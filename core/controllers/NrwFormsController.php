@@ -25,7 +25,7 @@ class NrwFormsController {
 		$post = array(
 			'form_id' => 3,
 			'frm_action' => 'create',
-			'form_key' => 'uy2uo',
+			'form_key' => 'arpyi',
 			'item_name' => 'New Sign Up',
 			'item_meta' => array(
 				15 => $request['name'],
@@ -78,7 +78,7 @@ class NrwFormsController {
 		$post = array(
 			'form_id' => 4,
 			'frm_action' => 'create',
-			'form_key' => 'fgzq',
+			'form_key' => 'ntyyr',
 			'item_name' => 'New Feedback',
 			'item_meta' => array(
 				18 => $request['name'],

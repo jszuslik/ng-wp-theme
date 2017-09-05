@@ -19,11 +19,11 @@ export class PageChildrenComponent implements OnInit {
     @HostListener("window:scroll", [])
     onWindowScroll() {
         const pxs = [
-            { start: 350, end: 1000 },
-            { start: 750, end: 1500 },
-            { start: 1250, end: 2000 },
-            { start: 1750, end: 2500 },
-            { start: 2250, end: 3000 },
+            { start: 0, end: 1000 },
+            { start: 500, end: 1500 },
+            { start: 1000, end: 2000 },
+            { start: 1500, end: 2500 },
+            { start: 2000, end: 3000 },
         ];
         let number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
         if (number > 50) {

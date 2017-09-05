@@ -10,6 +10,8 @@ import {Router} from '@angular/router';
 export class LeftComponent implements OnInit {
 
     @Input() page: Page = new Page;
+    btn_text = 'Learn More';
+    thumbnail: string;
 
     constructor(private router: Router) { }
 
@@ -18,6 +20,12 @@ export class LeftComponent implements OnInit {
     }
 
     ngOnInit() {
+        if(this.page.meta_data.nrw_btn_text[0]) {
+            this.btn_text = this.page.meta_data.nrw_btn_text[0];
+        }
+        if(this.page.post_thumbnail){
+            this.thumbnail = this.page.post_thumbnail;
+        }
     }
 
 }

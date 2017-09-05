@@ -54,22 +54,22 @@
   transition-property: all;
   transition-timing-function: cubic-bezier(.7,1,.7,1);
 }
-.nrw_header_logo_img_dark,
-.is-open .nrw_header_logo_img_dark,
-.nrw_header_scroll.is-open .nrw_header_logo_img_dark {
+.nrw_header_logo_img_light,
+.is-open .nrw_header_logo_img_light,
+.nrw_header_scroll.is-open .nrw_header_logo_img_light {
   opacity: 1;
 }
-.nrw_header_scroll .nrw_header_logo_img_dark,
-.nrw_header_scroll.is-open .nrw_header_logo_img_light {
+.nrw_header_scroll .nrw_header_logo_img_light,
+.nrw_header_scroll.is-open .nrw_header_logo_img_dark {
   opacity: 0;
 }
-.nrw_header_logo_img_light {
+.nrw_header_logo_img_dark {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-.nrw_header_scroll .nrw_header_logo_img_light {
+.nrw_header_scroll .nrw_header_logo_img_dark {
   opacity: 1;
 }
 .nrw_header_trigger {

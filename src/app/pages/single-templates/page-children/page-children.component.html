@@ -6,7 +6,7 @@
 </div>
 <hr class="colored-rule-center" [style.width.px]="hrWidth">
 <div *ngFor="let child of page.children; let i = index">
-    <hr class="colored-rule-left" *ngIf="i % 2 === 0 && i > 1" [style.width.px]="childHrs[i - 1]">
+    <hr class="colored-rule-right" *ngIf="i % 2 === 0 && i > 1" [style.width.px]="childHrs[i - 1]">
     <app-left *ngIf="i % 2 === 0" [page]="child"></app-left>
     <hr class="colored-rule-left" *ngIf="i % 2 != 0 && i >= 1" [style.width.px]="childHrs[i - 1]">
     <app-right *ngIf="i % 2 != 0" [page]="child"></app-right>

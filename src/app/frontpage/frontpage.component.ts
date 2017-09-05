@@ -1,5 +1,6 @@
 import {Component, HostListener, Inject, OnInit} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-frontpage',
@@ -11,7 +12,7 @@ export class FrontpageComponent implements OnInit {
     isScrolling = false;
     hrWidth = 0;
 
-    constructor(@Inject(DOCUMENT) private document: Document) { }
+    constructor(@Inject(DOCUMENT) private document: Document, private titleService: Title) { }
 
     @HostListener("window:scroll", [])
     onWindowScroll() {

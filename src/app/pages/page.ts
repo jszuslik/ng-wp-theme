@@ -23,6 +23,10 @@ export class Page {
     post_mime_type: string;
     comment_count: string;
     filter: string;
+    blog_title: string;
+    blog_description: string;
+    meta_data: any;
+    post_parent_title: string;
     page_template: string;
     post_thumbnail: string;
     children: Page[];

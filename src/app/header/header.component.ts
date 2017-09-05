@@ -39,6 +39,13 @@ export class HeaderComponent implements OnInit {
         this.overlayActive = !this.overlayActive;
     }
 
+    clickHomeLogo() {
+        this.router.navigate(['/']);
+        if(this.overlayActive) {
+            this.overlayActive = !this.overlayActive;
+        }
+    }
+
     @HostListener("window:scroll", [])
     onWindowScroll() {
         let number = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
