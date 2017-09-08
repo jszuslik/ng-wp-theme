@@ -6,15 +6,15 @@ import {PageSingleComponent} from './pages/page-single/page-single.component';
 import {FrontpageComponent} from './frontpage/frontpage.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: FrontpageComponent,
-    pathMatch: 'full'
-  },
-  {
-    path: 'post/:postslug',
-    component: PostSingleComponent
-  },
+    {
+        path: '',
+        component: FrontpageComponent,
+        pathMatch: 'full'
+    },
+    {
+        path: 'post/:postslug',
+        component: PostSingleComponent
+    },
     {
         path: ':pageslug',
         component: PageSingleComponent

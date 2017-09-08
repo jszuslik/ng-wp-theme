@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  wpBase: '//{YOUR_SITE_HERE}.com/wp-json/wp/v2/'
+    wpBase: '//norulesweb.dev/wp-json/wp/v2/',
+    wpCustomBase: '//norulesweb.dev/wp-json/nrw/v1/'
 };

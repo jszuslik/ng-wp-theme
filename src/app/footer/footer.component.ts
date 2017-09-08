@@ -15,9 +15,9 @@ export class FooterComponent implements OnInit {
     footerMenu: MenuItem[] = [];
     socialMenu: MenuItem[] = [];
     serviceMenu: MenuItem[] = [];
-    blogInfo: {} = {
-        title: '',
-        description: ''
+    blogInfo: {
+        title: string;
+        description: string;
     };
 
     constructor(private _ms: MenuService, private router: Router, private _cs: CommonService) { }

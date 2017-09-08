@@ -18,13 +18,11 @@ import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { CallToActionComponent } from './frontpage/call-to-action/call-to-action.component';
-import {ComponentMetadata} from 'codelyzer/angular/metadata';
 import {CommonService} from './services/common.service';
 import { AboutComponent } from './frontpage/about/about.component';
 import { SpecialtiesComponent } from './frontpage/specialties/specialties.component';
 import { ProcessComponent } from './frontpage/process/process.component';
 import { FeedbackComponent } from './frontpage/feedback/feedback.component';
-import {RouterModule} from '@angular/router';
 import { PageChildrenComponent } from './pages/single-templates/page-children/page-children.component';
 import { PageDefaultComponent } from './pages/single-templates/page-default/page-default.component';
 import { LeftComponent } from './pages/single-templates/page-children/children-sides/left/left.component';
@@ -53,7 +51,7 @@ import { RightComponent } from './pages/single-templates/page-children/children-
     RightComponent
   ],
   imports: [
-      BrowserModule,
+      BrowserModule.withServerTransition({appId: 'ng-wp-theme'}),
       FormsModule,
       HttpClientModule,
       Wpng2RoutingModule,
