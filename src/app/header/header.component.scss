@@ -37,6 +37,7 @@
   vertical-align: middle;
 }
 .nrw_header_logo {
+  cursor: pointer;
   position: relative;
   z-index: 9999;
   width: 100%;
@@ -234,6 +235,10 @@
   transition: all .4s .2s ease-out;
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
+}
+.is-open .nrw_header_nav_menu_item:hover a {
+  color: #03a9f4 !important;
+  margin-right: 15px;
 }
 .nrw_header_nav_menu_link {
   display: inline-block;

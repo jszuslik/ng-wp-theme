@@ -11,6 +11,10 @@
   cursor: pointer;
   font-size: 0.9375rem !important;
   color: rgba(255, 255, 255, 0.8) !important;
+  -webkit-transition: all .4s .2s ease-out;
+  transition: all .4s .2s ease-out;
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 .nav_footer_menu_link:hover {
   color: #03a9f4 !important;
