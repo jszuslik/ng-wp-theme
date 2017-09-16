@@ -52,12 +52,12 @@
                     <p class="nrw_color_white">{{blogInfo.description}}</p>
                     <ul class="list-unstyled">
                         <li class="nav_footer_menu_item">
-                            <a title="Phone Number" class="nav_footer_menu_link">
+                            <a title="Phone Number" class="nav_footer_menu_link" target="_blank" [href]="'tel:+1' + blogInfo.nrw_phone_field">
                                 Phone: {{phone}}
                             </a>
                         </li>
                         <li class="nav_footer_menu_item">
-                            <a title="Contact Email Address" class="nav_footer_menu_link">
+                            <a title="Contact Email Address" class="nav_footer_menu_link" [href]="'mailto:' + blogInfo.nrw_email_field">
                                 Email: {{blogInfo.nrw_email_field}}
                             </a>
                         </li>
